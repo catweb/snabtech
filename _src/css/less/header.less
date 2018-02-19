@@ -1,0 +1,83 @@
+@import "../mixins";
+
+.header {
+  border-top: 5px solid #f78234;
+  border-bottom: 5px solid #f78234;
+  background: #FFFFFF;
+  font-size: 16px;
+  .container {
+    height: 140px;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      .size(951,140);
+      background: url("/img/header/back.png") no-repeat 0 0;
+      top: 0;
+      left: 210px;
+    }
+  }
+}
+.header__logo {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  .size(381,130);
+  background: url("/img/header/logo.png") no-repeat 0 0;
+  text-indent: -9999px;
+}
+.header__menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  left: 298px;
+  top: 0;
+  .size(650,40);
+  & > li {
+    position: relative;
+  }
+  a {
+    color: #FFFFFF;
+  }
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #141b4f;
+    transform: skewX(-35deg);
+  }
+
+}
+.header__button {
+  .size(150,36);
+  text-align: center;
+  line-height: 36px;
+  color: #FFFFFF;
+  display: block;
+  position: absolute;
+  top: 73px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  background: #f78234;
+}
+.header__info {
+  position: absolute;
+  top: 50px;
+  right: 105px;
+  width: 315px;
+  color: #FFFFFF;
+}
+.header__info__phone {
+  color: #f78234;
+  font-size: 29px;
+  line-height: 1;
+  margin-bottom: 10px;
+}

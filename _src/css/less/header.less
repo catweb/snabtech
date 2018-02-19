@@ -7,6 +7,9 @@
   font-size: 16px;
   .container {
     height: 140px;
+    .media(900px, {
+      height: auto;
+    });
     &:before {
       content: '';
       display: block;
@@ -15,6 +18,9 @@
       background: url("/img/header/back.png") no-repeat 0 0;
       top: 0;
       left: 210px;
+      .media(900px, {
+        display: none;
+      });
     }
   }
 }
@@ -27,6 +33,14 @@
   .size(381,130);
   background: url("/img/header/logo.png") no-repeat 0 0;
   text-indent: -9999px;
+  .media(900px, {
+    .size(303,105);
+    transform: translateY(0);
+    position: static;
+    margin: 0 auto;
+    padding: 8px 0;
+    background: url("/img/header/logo_sm.png") no-repeat 0 center;
+  });
 }
 .header__menu {
   display: flex;
@@ -59,7 +73,12 @@
     background: #141b4f;
     transform: skewX(-35deg);
   }
-
+  .media(1080px, {
+    width: 620px;
+  });
+  .media(900px, {
+    display: none;
+  });
 }
 .header__button {
   .size(150,36);
@@ -69,11 +88,18 @@
   display: block;
   position: absolute;
   top: 73px;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 50%;
+  transform: translateX(50%);
   border-radius: 5px;
   background: #f78234;
   text-decoration: none;
+  .media(1080px, {
+    right: 340px;
+    transform: translateX(0);
+  });
+  .media(900px, {
+    display: none;
+  });
 }
 .header__info {
   position: absolute;
@@ -81,11 +107,59 @@
   right: 105px;
   width: 315px;
   color: #FFFFFF;
+  .media(1080px, {
+    right: 0;
+  });
+  .media(900px, {
+    position: relative;
+    top: 0;
+    background: #181f52;
+    width: auto;
+    text-align: center;
+    padding: 5px 20px;
+  });
+  .media(576px, {
+    text-align: right;
+  });
 }
 .header__info__phone {
   color: #f78234;
   font-size: 29px;
   line-height: 1;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-weight: 700;
+  .media(900px, {
+    font-size: 18px;
+    color: #FFFFFF;
+    margin-bottom: 0;
+  });
+}
+.header__burger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  background: #ececec;
+  cursor: pointer;
+  display: none;
+  .media(900px, {
+    display: block;
+  });
+}
+.header__burger__icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 36px;
+  border-top: 6px solid #878787;
+  border-bottom: 6px solid #878787;
+  &:before {
+    content: '';
+    display: block;
+    margin: 6px 0;
+    height: 6px;
+    background: #878787;
+  }
 }

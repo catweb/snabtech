@@ -1,9 +1,46 @@
 @import "../mixins";
 
 .empty {
-  height: 100px;
+  height: 325px;
   position: relative;
 }
-footer {
-  margin-top: -100px;
+.footer {
+  border-top: 5px solid #f78234;
+  margin-top: -325px;
+  height: 320px;
+  position: relative;
+  z-index: 10;
+  background: #141b4f;
+  color: #FFFFFF;
+  .container {
+    height: 100%;
+    background: url("/img/footer/back.png") no-repeat right center;
+  }
+}
+.footer__info {
+  color: #e0e0e0;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: right;
+  position: absolute;
+  top: 30px;
+  right: 25px;
+}
+.footer__info__title {
+  font-weight: 700;
+}
+.footer__rights {
+  position: absolute;
+  left: 25px;
+  bottom: 15px;
+  color: #FFFFFF;
+}
+.footer__menu {
+  position: absolute;
+  top: 30px;
+  left: 25px;
+  font-size: 16px;
+  a {
+    color: #FFFFFF;
+  }
 }

@@ -15,6 +15,10 @@
   .container {
     height: 100%;
     background: url("/img/footer/back.png") no-repeat right center;
+    box-sizing: border-box;
+    .media(576px, {
+      padding: 15px 10px;
+    });
   }
 }
 .footer__info {
@@ -25,6 +29,11 @@
   position: absolute;
   top: 30px;
   right: 25px;
+  .media(576px, {
+    position: static;
+    text-align: left;
+    margin-bottom: 15px;
+  });
 }
 .footer__info__title {
   font-weight: 700;
@@ -34,6 +43,9 @@
   left: 25px;
   bottom: 15px;
   color: #FFFFFF;
+  .media(576px, {
+    position: static;
+  });
 }
 .footer__menu {
   position: absolute;
@@ -43,4 +55,8 @@
   a {
     color: #FFFFFF;
   }
+  .media(576px, {
+    position: static;
+    margin-bottom: 15px;
+  });
 }

@@ -14,25 +14,26 @@
 }
 .mobile_menu__list {
   padding-top: 50px;
-  & > ul {
-    font-size: 18px;
-    line-height: 1;
-    & > li {
-      padding: 5px 20px;
-      border-bottom: 1px solid #FFFFFF;
-      font-weight: 700;
-      a {
-        color: #FFFFFF;
-        text-decoration: none;
-        display: block;
-      }
-      & > ul {
-        padding: 5px 0 0 15px;
-        font-size: 16px;
-        & > li {
-          padding: 5px 0;
-          font-weight: 400;
-        }
+  font-size: 18px;
+  line-height: 1;
+  & > li {
+    padding: 5px 20px;
+    border-bottom: 1px solid #FFFFFF;
+    font-weight: 700;
+    &:first-child {
+      border-top: 1px solid #FFFFFF;
+    }
+    a {
+      color: #FFFFFF;
+      text-decoration: none;
+      display: block;
+    }
+    & > ul {
+      padding: 5px 0 0 15px;
+      font-size: 16px;
+      & > li {
+        padding: 5px 0;
+        font-weight: 400;
       }
     }
   }

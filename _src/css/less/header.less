@@ -43,15 +43,16 @@
   });
 }
 .header__menu {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   position: absolute;
   left: 298px;
   top: 0;
   .size(650,40);
   font-weight: 700;
-  & > li {
+  & > ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
     position: relative;
   }
   a {

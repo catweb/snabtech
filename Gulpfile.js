@@ -98,7 +98,7 @@ gulp.task('css', function(){
             // append: '?version=1',
             // prepend: '../path'
         })))
-        .pipe(gulpif(environments.prod, cleanCSS()))
+        //.pipe(gulpif(environments.prod, cleanCSS()))
         .pipe(gulp.dest(build.css))
         .pipe(gulpif(environments.serv, reload({ stream: true })));
 });

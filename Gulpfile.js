@@ -94,7 +94,7 @@ gulp.task('css', function(){
         .pipe(gulpif(environments.dev, remember('styles')))
         .pipe(concat('style.css'))
         .pipe(gulpif(environments.prod, urlAdjuster({
-            replace:  ['/img/','../img/']
+            replace:  ['/img/','./img/']
             // append: '?version=1',
             // prepend: '../path'
         })))

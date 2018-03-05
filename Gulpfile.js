@@ -98,9 +98,25 @@ gulp.task('css', function(){
             // append: '?version=1',
             // prepend: '../path'
         })))
-        //.pipe(gulpif(environments.prod, cleanCSS()))
+        .pipe(gulpif(environments.prod, cleanCSS()))
         .pipe(gulp.dest(build.css))
         .pipe(gulpif(environments.serv, reload({ stream: true })));
+});
+gulp.task('cssWP', function(){
+    var processors = [
+        autoprefixer({
+            browsers: ['last 5 versions', 'IE 9'],
+            cascade: false
+        })
+    ];
+    return gulp.src(src.less)
+        .pipe(less())
+        .pipe(postcss(processors))
+        .pipe(concat('style.css'))
+        .pipe(urlAdjuster({
+            replace:  ['/img/','./img/']
+        }))
+        .pipe(gulp.dest(build.css));
 });
 
 gulp.task('imgMin', function(){

@@ -34,7 +34,7 @@
 .product__item {
   display: block;
   background: #f78234;
-  width: 24%;
+  width: 16%;
   transition: transform 100ms ease-in;
   transform: scale(1);
   &:hover {
@@ -43,9 +43,12 @@
     transform: scale(1.03);
     box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.40);
   }
+  .media(900px, {
+    width: 33%;
+    margin-bottom: 5px;
+  });
   .media(576px, {
     width: 49%;
-    margin-bottom: 5px;
   });
 }
 .product__item__pic {
